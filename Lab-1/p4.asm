@@ -17,7 +17,7 @@ mov a, m
 lxi h, 2501h
 mov b, m
 
-sub b
+sbb b
 
 lxi h, 2502h
 mov m, a

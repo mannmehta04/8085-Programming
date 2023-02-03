@@ -1,13 +1,13 @@
 
 ;Program 6
 
-lxi b, 2504h ;store in bc pair
-lxi d, 2508h ;store in de pair
+lxi b, 3204h ;store in bc pair
+lxi d, 3108h ;store in de pair
 
 ;subtract c & e
 
 mov a, c
-sbb e
+sub e
 
 mov l, a
 

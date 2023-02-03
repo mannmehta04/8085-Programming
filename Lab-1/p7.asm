@@ -9,10 +9,10 @@ mvi m, 20h
 lxi h, 2501h
 mvi m, 05h
 
-lxi h, 2502h
+lxi h, 2600h
 mvi m, 20h
 
-lxi h, 2503h
+lxi h, 2601h
 mvi m, 05h
 
 ;load back to register
@@ -23,10 +23,10 @@ mov b, m
 lxi h, 2501h
 mov c, m
 
-lxi h, 2502h
+lxi h, 2600h
 mov d, m
 
-lxi h, 2503h
+lxi h, 2601h
 mov e, m
 
 ;add c & e
@@ -34,7 +34,7 @@ mov e, m
 mov a, c
 adc e
 
-lxi h, 2505h
+lxi h, 2701h
 mov m, a
 
 ;add b & d
@@ -42,7 +42,7 @@ mov m, a
 mov a, b
 adc d
 
-lxi h, 2504h
+lxi h, 2700h
 mov m, a
 
 hlt

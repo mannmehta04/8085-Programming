@@ -3,30 +3,30 @@
 
 ;load in memory
 
-lxi h, 2500h
-mvi m, 0Ah
-
-lxi h, 2501h
+lxi h, 2100h
 mvi m, 32h
 
-lxi h, 2502h
+lxi h, 2101h
 mvi m, 0Ah
 
-lxi h, 2503h
-mvi m, 32h
+lxi h, 2600h
+mvi m, 31h
+
+lxi h, 2601h
+mvi m, 09h
 
 ;load back to register
 
-lxi h, 2500h
+lxi h, 2100h
 mov b, m
 
-lxi h, 2501h
+lxi h, 2101h
 mov c, m
 
-lxi h, 2502h
+lxi h, 2600h
 mov d, m
 
-lxi h, 2503h
+lxi h, 2601h
 mov e, m
 
 ;add c & e
@@ -34,7 +34,7 @@ mov e, m
 mov a, c
 sub e
 
-lxi h, 2505h
+lxi h, 2701h
 ;cma
 mov m, a
 
@@ -43,7 +43,7 @@ mov m, a
 mov a, b
 sbb d
 
-lxi h, 2504h
+lxi h, 2700h
 mov m, a
 
 hlt
