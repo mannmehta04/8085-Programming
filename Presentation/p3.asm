@@ -1,0 +1,28 @@
+
+;Program 3
+;	Starting from 2000h, store the data in 2100h,
+;	which are between 25h and 65h
+
+LXI H,1FFFH
+LXI D,2100H
+MVI C,20H
+LOOP: INX H
+MOV A,M
+CPI 25H
+JZ SKIP
+JC SKIP
+CPI 65H
+JZ SKIP
+JC STORE
+JMP LOOP
+SKIP: INX H
+DCR C
+JNZ LOOP
+JMP EXIT
+STORE: XCHG
+MOV M,A
+XCHG
+INX D
+DCR C
+JNZ LOOP
+EXIT: hlt
