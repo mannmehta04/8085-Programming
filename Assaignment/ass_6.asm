@@ -1,0 +1,8 @@
+MVI A, 09h
+MVI B, 02h
+MVI C, 0FFH
+Next: INR C
+SUB B
+JNC Next
+ADD B
+HLT
